@@ -1,3 +1,4 @@
 [
-  "test_personal_data.py::test_personal_data"
+  "test_emails.py::test_emails_on_home_page",
+  "test_emails.py::test_emails_on_view_page"
 ]
