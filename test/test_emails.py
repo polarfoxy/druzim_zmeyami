@@ -15,6 +15,7 @@ def test_emails_on_view_page(app):
     assert contact_from_view_page.email2 == contact_from_edit_page.email2
     assert contact_from_view_page.email3 == contact_from_edit_page.email3
 
+
 def clear(s):
     return re.sub("", "", s)
 
