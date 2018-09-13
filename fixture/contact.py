@@ -73,10 +73,11 @@ class ContactHelper:
                 firstname = cells[2].text
                 lastname = cells[1].text
                 all_phones = cells[5].text
+                all_emails = cells[4].text
                 id = cells[0].find_element_by_css_selector("input").get_attribute("id")
                 self.contact_cache.append(Contact(firstname=firstname, lastname=lastname,
-                                                   all_phones_from_home_page=all_phones, id=id))
-        return list(self.contact_cache)
+                                                   all_phones_from_home_page=all_phones, all_emails_from_home_page=all_emails, id=id))
+            return list(self.contact_cache)
 
     def open_contact_to_edit_by_index(self, index):
         wd = self.app.wd
@@ -92,6 +93,7 @@ class ContactHelper:
         cell = wd.find_elements_by_tag_name("td")[6]
         cell.find_element_by_tag_name("a").click()
 
+
     def get_contact_info_from_edit_page(self, index):
         wd = self.app.wd
         self.open_contact_to_edit_by_index(index)
@@ -101,9 +103,14 @@ class ContactHelper:
         mobilephone = wd.find_element_by_name("mobile").get_attribute("value")
         workphone = wd.find_element_by_name("work").get_attribute("value")
         secondaryphone = wd.find_element_by_name("phone2").get_attribute("value")
+        email = wd.find_element_by_name("email").get_attribute("value")
+        email2 = wd.find_element_by_name("email2").get_attribute("value")
+        email3 = wd.find_element_by_name("email3").get_attribute("value")
         id = wd.find_element_by_name("id").get_attribute("value")
         return Contact(firstname=firstname, lastname=lastname, home=homephone, mobile=mobilephone,
-                       work=workphone, phone2=secondaryphone, id=id)
+                       work=workphone, phone2=secondaryphone, email=email, email2=email2,
+                       email3=email3, id=id)
+
 
     def get_contact_info_from_view_page(self, index):
         wd = self.app.wd
@@ -113,5 +120,10 @@ class ContactHelper:
         mobilephone = re.search("M: (.*)", text).group(1)
         workphone = re.search("W: (.*)", text).group(1)
         secondaryphone = re.search("P: (.*)", text).group(1)
-        return Contact(home=homephone, mobile=mobilephone, work=workphone, phone2=secondaryphone
-                       , id=id)
+        content = wd.find_element_by_css_selector("div[id='content']")
+        emails = content.find_elements_by_tag_name("a")
+        email = emails[0].text
+        email2 = emails[1].text
+        email3 = emails[2].text
+        return Contact(home=homephone, mobile=mobilephone, work=workphone, phone2=secondaryphone,
+                       email=email, email2=email2, email3=email3, id=id)

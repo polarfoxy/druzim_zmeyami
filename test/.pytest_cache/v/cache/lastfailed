@@ -1,9 +1,15 @@
 {
   "test_add_contact.py::test_add_contact[None::LNKNu]": true,
+  "test_add_contact.py::test_add_contact[None::yUoaJ]": true,
   "test_add_contact.py::test_add_contact[None:A:i]": true,
+  "test_add_contact.py::test_add_contact[None:BibHfd:]": true,
   "test_add_contact.py::test_add_contact[None:MPQiSlZx:udN]": true,
   "test_add_contact.py::test_add_contact[None:NiDbrUFW:DUHWwz]": true,
+  "test_add_contact.py::test_add_contact[None:OgvP:wq]": true,
   "test_add_contact.py::test_add_contact[None:XEC:FgB]": true,
+  "test_add_contact.py::test_add_contact[None:ZTi:f]": true,
+  "test_add_contact.py::test_add_contact[None:cVqRZ:lTrPY]": true,
+  "test_add_contact.py::test_add_contact[None:oAD:Vb]": true,
   "test_add_contact.py::test_add_contact[None:qW:m]": true,
   "test_add_group.py::test_add_group[None:name :footer cKp:K]": true,
   "test_add_group.py::test_add_group[None:name :footerC]": true,
@@ -20,7 +26,9 @@
   "test_add_group.py::test_add_group[None:name:`' :footer]": true,
   "test_add_group.py::test_add_group[None:name:footern]": true,
   "test_add_group.py::test_add_group[None:name:footerx)fXH@zrU@]": true,
+  "test_add_group.py::test_add_group[None:name<q`lUv:footer(%LGqXW]": true,
   "test_add_group.py::test_add_group[None:name>*\\\\0:footerUa\"&o]": true,
+  "test_add_group.py::test_add_group[None:name@,Q  g:footer2  /T]": true,
   "test_add_group.py::test_add_group[None:nameC'oNq_Z:footerF8;$&j0%H]": true,
   "test_add_group.py::test_add_group[None:nameHd@@E:footerE  Gh.FohFB]": true,
   "test_add_group.py::test_add_group[None:nameI0Z~ :footerO8] rW.]": true,
@@ -39,5 +47,6 @@
   "test_add_group.py::test_add_group[None:namex=\\\\ R o^E:footermLr|.0]": true,
   "test_add_group.py::test_add_group[None:namey~=':footer]": true,
   "test_add_group.py::test_add_group[None:name}p2r\\\\%:footera PSO:5!ZOJI 3]": true,
-  "test_add_group.py::test_add_group[None:name~\\\\2R:footerI5}UmF]": true
+  "test_add_group.py::test_add_group[None:name~\\\\2R:footerI5}UmF]": true,
+  "test_mod_contact.py::test_mod_some_contact": true
 }
