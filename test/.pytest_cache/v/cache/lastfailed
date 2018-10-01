@@ -80,7 +80,6 @@
   "test_add_group.py::test_add_group[None:name}p2r\\\\%:footera PSO:5!ZOJI 3]": true,
   "test_add_group.py::test_add_group[None:name~;:footer> 0R~v]": true,
   "test_add_group.py::test_add_group[None:name~\\\\2R:footerI5}UmF]": true,
-  "test_del_group.py::test_delete_some_group": true,
   "test_emails.py::test_emails_on_home_page": true,
   "test_emails.py::test_emails_on_view_page": true,
   "test_mod_contact.py::test_mod_some_contact": true

@@ -72,3 +72,27 @@ class GroupHelper:
                 id = element.find_element_by_name("selected[]").get_attribute("value")
                 self.group_cache.append(Group(name=text, id=id))
         return list(self.group_cache)
+
+
+    def delete_group_by_id(self, id):
+         wd = self.app.wd
+         self.go_to_group_page()
+         self.select_group_by_id(id)
+         wd.find_element_by_name("delete").click()
+         self.go_to_group_page()
+         self.group_cache = None
+
+
+    def select_group_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("input[value='%s']" % id).click()
+
+    def mod_group_by_id(self, group, id):
+        wd = self.app.wd
+        self.go_to_group_page()
+        self.select_group_by_id(id)
+        wd.find_element_by_name("edit").click()
+        self.type("group_name", group.name)
+        wd.find_element_by_name("update").click()
+        self.go_to_group_page()
+        self.group_cache = None
